@@ -38,6 +38,7 @@ namespace DeliverySystem
 
         private void btnSimulate_Click(object sender, EventArgs e)
         {
+            Logger.Log("Simulation started.");
             TF.CleanFleet();
 
             Dictionary<int, int> order_quantity = new Dictionary<int, int>();
@@ -96,12 +97,14 @@ namespace DeliverySystem
                 simulation_ans = "Is possible to deliver the products with this trucks.\n" + simulation_ans;
                 btnStartDelivery.Enabled = true;
                 lblSimulationAns.ForeColor = Color.Green;
+                Logger.Log("Simulation finished, delivery is possible.");
             }
             else
             {
                 simulation_ans = "Is not possible to deliver the products with this trucks.\n" + simulation_ans;
                 btnStartDelivery.Enabled = false;
                 lblSimulationAns.ForeColor = Color.Red;
+                Logger.Log("Simulation finished, delivery is NOT possible. Please add more trucks.");
             }
 
             lblSimulationAns.Text = simulation_ans;
@@ -123,6 +126,8 @@ namespace DeliverySystem
             if (Convert.ToInt32(num.Text) > num.Value)
             {
                 _trucks_count--;
+                Logger.Log(String.Format("Decreased number of vegetable trucks: using {0} trucks", _trucks_count));
+
             }
             else
             {
@@ -133,6 +138,8 @@ namespace DeliverySystem
                 else
                 {
                     _trucks_count++;
+                    Logger.Log(String.Format("Increased number of vegetable trucks: using {0} trucks", _trucks_count));
+
                 }
             }
         }
@@ -144,6 +151,7 @@ namespace DeliverySystem
             if (Convert.ToInt32(num.Text) > num.Value)
             {
                 _trucks_count--;
+                Logger.Log(String.Format("Decreased Number of soda trucks: using {0} trucks", _trucks_count));
             }
             else 
             {
@@ -154,6 +162,7 @@ namespace DeliverySystem
                 else
                 {
                     _trucks_count++;
+                    Logger.Log(String.Format("Increased Number of soda trucks: using {0} trucks", _trucks_count));
                 }
             }
         }
@@ -165,6 +174,8 @@ namespace DeliverySystem
             if (Convert.ToInt32(num.Text) > num.Value)
             {
                 _trucks_count--;
+                Logger.Log(String.Format("Decreased number of bread trucks: using {0} trucks", _trucks_count));
+
             }
             else
             {
@@ -175,6 +186,8 @@ namespace DeliverySystem
                 else
                 {
                     _trucks_count++;
+                    Logger.Log(String.Format("Increased number of soda trucks: using {0} trucks", _trucks_count));
+
                 }
             }
         }

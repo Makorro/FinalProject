@@ -38,22 +38,26 @@ namespace DeliverySystem
 
         private void btnDeliver_Click(object sender, EventArgs e)
         {
+            
             Store current_store = _sorted_stores_list[_current_store];
+            Logger.Log(String.Format("Delivery started, next store {0}", current_store.storeName));
             double total_payed = current_store.GetTotalProductsPrice();
             DialogResult dialog_result = MessageBox.Show("Your order has been delivered.\nYou have payed: $" +
                 total_payed.ToString() + ".\nDo you want to order more products?", "Delivering to " + 
                 current_store.storeName, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
+            Logger.Log(String.Format("Delivery successful, for store {0}", current_store.storeName));
             _total_earning += total_payed;
 
             if (dialog_result == DialogResult.Yes)
             {
+                Logger.Log(String.Format("Store {0} is ready for creating  new order", current_store.storeName));
                 OrderProducts order_products = new OrderProducts();
                 order_products.SetCurrentStore(current_store);
                 order_products.ShowDialog();
             }
             else
             {
+                Logger.Log(String.Format("Store {0} will not create a new order", current_store.storeName));
                 current_store.products = new List<Product>();
                 _qrAdapter.CreateQR(current_store);
             }
@@ -63,6 +67,7 @@ namespace DeliverySystem
             {
                 Form fstores = new fStores();
                 fstores.Show();
+                Logger.Log(String.Format("You have finished delivering today's products. Hooray!"));
                 this.Close();
             }
             else

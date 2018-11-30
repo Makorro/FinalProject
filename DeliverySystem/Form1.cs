@@ -25,6 +25,8 @@ namespace DeliverySystem
 
             var files = directory.GetFiles("*.png");
 
+            Logger.Add(new FileLog());
+            Logger.Log("DeliveryApp Started!");
             StoreList.Init();
             foreach (var image in files)
             {
@@ -32,6 +34,7 @@ namespace DeliverySystem
             }
 
             dgvStores.DataSource = StoreList.GetStores().Select(o => new { Id = o.idStore, Name = o.storeName }).ToList();
+            dgvStores.Columns["Name"].Width = 220;
         }
 
         private void btnDeliverOrder_Click(object sender, EventArgs e)
@@ -39,6 +42,12 @@ namespace DeliverySystem
             Form deliverySimulation = new DeliverySimulation();
             deliverySimulation.Show();
             this.Hide();
+        }
+
+        private void btnLogConfig_Click(object sender, EventArgs e)
+        {
+            Form logConfig = new FLogConfiguration();
+            logConfig.Show();
         }
     }
 }

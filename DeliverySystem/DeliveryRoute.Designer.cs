@@ -78,6 +78,7 @@
             // 
             // tbVisitedStores
             // 
+            this.tbVisitedStores.Enabled = false;
             this.tbVisitedStores.Location = new System.Drawing.Point(145, 23);
             this.tbVisitedStores.Name = "tbVisitedStores";
             this.tbVisitedStores.Size = new System.Drawing.Size(100, 22);
@@ -85,6 +86,7 @@
             // 
             // tbRemainingStores
             // 
+            this.tbRemainingStores.Enabled = false;
             this.tbRemainingStores.Location = new System.Drawing.Point(145, 67);
             this.tbRemainingStores.Name = "tbRemainingStores";
             this.tbRemainingStores.Size = new System.Drawing.Size(100, 22);
@@ -92,6 +94,7 @@
             // 
             // tbCurrentStore
             // 
+            this.tbCurrentStore.Enabled = false;
             this.tbCurrentStore.Location = new System.Drawing.Point(145, 105);
             this.tbCurrentStore.Name = "tbCurrentStore";
             this.tbCurrentStore.Size = new System.Drawing.Size(144, 22);
@@ -108,6 +111,7 @@
             // 
             // tbTotalEarning
             // 
+            this.tbTotalEarning.Enabled = false;
             this.tbTotalEarning.Location = new System.Drawing.Point(145, 148);
             this.tbTotalEarning.Name = "tbTotalEarning";
             this.tbTotalEarning.Size = new System.Drawing.Size(100, 22);
