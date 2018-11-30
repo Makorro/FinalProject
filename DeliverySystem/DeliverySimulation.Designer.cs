@@ -38,6 +38,9 @@
             this.btnSimulate = new System.Windows.Forms.Button();
             this.btnStartDelivery = new System.Windows.Forms.Button();
             this.lblSimulationAns = new System.Windows.Forms.Label();
+            this.lblFrozenVeggies = new System.Windows.Forms.Label();
+            this.lblDrinks = new System.Windows.Forms.Label();
+            this.lblBread = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBread)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVegetables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDrinks)).BeginInit();
@@ -134,11 +137,41 @@
             this.lblSimulationAns.Text = "label1";
             this.lblSimulationAns.Visible = false;
             // 
+            // lblFrozenVeggies
+            // 
+            this.lblFrozenVeggies.AutoSize = true;
+            this.lblFrozenVeggies.Location = new System.Drawing.Point(42, 15);
+            this.lblFrozenVeggies.Name = "lblFrozenVeggies";
+            this.lblFrozenVeggies.Size = new System.Drawing.Size(125, 17);
+            this.lblFrozenVeggies.TabIndex = 9;
+            this.lblFrozenVeggies.Text = "Frozen vegetables";
+            // 
+            // lblDrinks
+            // 
+            this.lblDrinks.AutoSize = true;
+            this.lblDrinks.Location = new System.Drawing.Point(42, 127);
+            this.lblDrinks.Name = "lblDrinks";
+            this.lblDrinks.Size = new System.Drawing.Size(48, 17);
+            this.lblDrinks.TabIndex = 10;
+            this.lblDrinks.Text = "Drinks";
+            // 
+            // lblBread
+            // 
+            this.lblBread.AutoSize = true;
+            this.lblBread.Location = new System.Drawing.Point(42, 253);
+            this.lblBread.Name = "lblBread";
+            this.lblBread.Size = new System.Drawing.Size(46, 17);
+            this.lblBread.TabIndex = 11;
+            this.lblBread.Text = "Bread";
+            // 
             // DeliverySimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 399);
+            this.Controls.Add(this.lblBread);
+            this.Controls.Add(this.lblDrinks);
+            this.Controls.Add(this.lblFrozenVeggies);
             this.Controls.Add(this.lblSimulationAns);
             this.Controls.Add(this.btnStartDelivery);
             this.Controls.Add(this.btnSimulate);
@@ -173,5 +206,8 @@
         private System.Windows.Forms.Button btnSimulate;
         private System.Windows.Forms.Button btnStartDelivery;
         private System.Windows.Forms.Label lblSimulationAns;
+        private System.Windows.Forms.Label lblFrozenVeggies;
+        private System.Windows.Forms.Label lblDrinks;
+        private System.Windows.Forms.Label lblBread;
     }
 }

@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/luiscorrea/Desktop/FinalProject/DeliverySystem/DeliverySystem.csproj",
+  "TargetFramework": "v4.6.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

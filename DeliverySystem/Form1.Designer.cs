@@ -51,12 +51,13 @@
             this.btnLogConfig.TabIndex = 1;
             this.btnLogConfig.Text = "Log configuration";
             this.btnLogConfig.UseVisualStyleBackColor = true;
+            this.btnLogConfig.Click += new System.EventHandler(this.btnLogConfig_Click);
             // 
             // btnDeliverOrder
             // 
-            this.btnDeliverOrder.Location = new System.Drawing.Point(399, 407);
+            this.btnDeliverOrder.Location = new System.Drawing.Point(380, 326);
             this.btnDeliverOrder.Name = "btnDeliverOrder";
-            this.btnDeliverOrder.Size = new System.Drawing.Size(116, 31);
+            this.btnDeliverOrder.Size = new System.Drawing.Size(135, 31);
             this.btnDeliverOrder.TabIndex = 2;
             this.btnDeliverOrder.Text = "Deliver orders";
             this.btnDeliverOrder.UseVisualStyleBackColor = true;
@@ -66,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 450);
+            this.ClientSize = new System.Drawing.Size(527, 375);
             this.Controls.Add(this.btnDeliverOrder);
             this.Controls.Add(this.btnLogConfig);
             this.Controls.Add(this.dgvStores);

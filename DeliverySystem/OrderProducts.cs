@@ -46,13 +46,21 @@ namespace DeliverySystem
                     int id = Convert.ToInt32(row.Cells["Id"].Value);
                     int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
 
-                    products.Add(new Product(ProductList.GetProductById(id), quantity));
+                    Product prod = new Product(ProductList.GetProductById(id), quantity);
+                    products.Add(prod);
+
+                    Logger.Log(String.Format("Store requested {0} of product {1}", quantity, prod.name));
                 }
             }
 
             current_store.products = products;
             qrAdapter.CreateQR(current_store);
             this.Close();
+        }
+
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

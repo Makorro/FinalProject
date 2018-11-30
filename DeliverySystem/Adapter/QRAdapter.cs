@@ -55,6 +55,7 @@ namespace DeliverySystem
             FileStream FS = new FileStream(path, FileMode.Create);
             QRStore.Save(FS, ImageFormat.Png);
             FS.Close();
+            Logger.Log(String.Format("Image succesfully created for store: {0}", qrStore.storeName));
         }
     }
 }
