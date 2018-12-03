@@ -10,23 +10,23 @@ namespace DeliverySystem
 {
     class FileLog : LogObserver
     {
-        private FileSingleton file_singleton;
+        private FileSingleton logElement;
 
         public FileLog()
         {
             IdLog = 0;
             LogName = "File Log";
-            file_singleton = FileSingleton.GetReference();
+            logElement = FileSingleton.GetReference();
         }
 
         public override void Close()
         {
-            file_singleton.Close();
+            logElement.Close();
         }
 
         public override void ConcreteLog(LogItem Log)
         {
-            file_singleton.AddLog(Log);
+            logElement.AddLog(Log);
         }
 
         public override int GetId()
