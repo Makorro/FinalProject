@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeliverySystem.Adapter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,7 +59,7 @@ namespace DeliverySystem
             else
             {
                 Logger.Log(String.Format("Store {0} will not create a new order", current_store.storeName));
-                current_store.products = new List<Product>();
+                current_store.products = new List<StoreProduct>();
                 _qrAdapter.CreateQR(current_store);
             }
 

@@ -57,7 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGridSingleton.cs" />
+    <Compile Include="Models\StoreProduct.cs" />
+    <Compile Include="Log\LogSingleton\DataGridSingleton.cs" />
     <Compile Include="FBoxLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,7 +71,7 @@
     <Compile Include="FDgvLog.Designer.cs">
       <DependentUpon>FDgvLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileSingleton.cs" />
+    <Compile Include="Log\LogSingleton\FileSingleton.cs" />
     <Compile Include="FLogConfiguration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,24 +109,23 @@
     <Compile Include="OrderProducts.Designer.cs">
       <DependentUpon>OrderProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs" />
-    <Compile Include="DBProduct.cs" />
-    <Compile Include="ProductList.cs" />
+    <Compile Include="Adapter\Product.cs" />
+    <Compile Include="Utils\DBProduct.cs" />
+    <Compile Include="Utils\ProductList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Adapter\QRAdapter.cs" />
-    <Compile Include="Adapter\QRProduct.cs" />
     <Compile Include="Adapter\QRStore.cs" />
-    <Compile Include="SingletonForms.cs" />
-    <Compile Include="TextboxSingleton.cs" />
+    <Compile Include="Log\LogSingleton\SingletonForms.cs" />
+    <Compile Include="Log\LogSingleton\TextboxSingleton.cs" />
     <Compile Include="Trucks\BreadTruck.cs" />
     <Compile Include="Trucks\SodaTruck.cs" />
-    <Compile Include="Store.cs" />
-    <Compile Include="StoreList.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Utils\StoreList.cs" />
     <Compile Include="Trucks\Truck.cs" />
     <Compile Include="Trucks\TruckFactory.cs" />
     <Compile Include="Trucks\VeggieTruck.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="DeliveryRoute.resx">
       <DependentUpon>DeliveryRoute.cs</DependentUpon>
     </EmbeddedResource>

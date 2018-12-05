@@ -10,6 +10,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using Newtonsoft.Json;
+using DeliverySystem.Adapter;
 
 namespace DeliverySystem
 {
@@ -24,6 +25,35 @@ namespace DeliverySystem
             _QRdecoder = new QRDecoder();
         }
 
+        private List<Product> ConvertStoreProductListToProductList(List<StoreProduct> store_products)
+        {
+            List<Product> products = new List<Product>();
+            Product product;
+
+            foreach (StoreProduct store_product in store_products)
+            {
+                product = new Product();
+                product.idProduct = store_product.idProduct;
+                product.name = store_product.name;
+                product.quantity = store_product.quantity;
+                products.Add(product);
+            }
+
+            return products;
+        }
+
+        private List<StoreProduct> ConvertProductListToStoreProductList(List<Product> products)
+        {
+            List<StoreProduct> store_products = new List<StoreProduct>();
+
+            foreach (Product product in products)
+            {
+                store_products.Add(new StoreProduct(product.idProduct, product.name, product.quantity));
+            }
+
+            return store_products;
+        }
+
         public Store ReadQR(string name)
         {
             string imagePath = Utils.GetStoresPath() + name;
@@ -35,7 +65,7 @@ namespace DeliverySystem
             QRStore qrStore = JsonConvert.DeserializeObject<QRStore>(jsonObject);
 
             Store store = new Store(qrStore.idStore, qrStore.storeName);
-            store.products = qrStore.products;
+            store.products = ConvertProductListToStoreProductList(qrStore.products);
             image.Dispose();
 
             return store;
@@ -47,7 +77,7 @@ namespace DeliverySystem
             string json = JsonConvert.SerializeObject(store);
 
             QRStore qrStore = new QRStore(store.idStore, store.storeName);
-            qrStore.products = store.products;
+            qrStore.products = ConvertStoreProductListToProductList(store.products);
 
             _QRencoder.Encode(ErrorCorrection.H, json);
             Bitmap QRStore = QRCodeToBitmap.CreateBitmap(_QRencoder, 4, 8);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeliverySystem.Adapter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,7 @@ namespace DeliverySystem
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            List<Product> products = new List<Product>();
+            List<StoreProduct> products = new List<StoreProduct>();
 
             foreach (DataGridViewRow row in dgvProducts.Rows)
             {
@@ -46,7 +47,7 @@ namespace DeliverySystem
                     int id = Convert.ToInt32(row.Cells["Id"].Value);
                     int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
 
-                    Product prod = new Product(ProductList.GetProductById(id), quantity);
+                    StoreProduct prod = new StoreProduct(ProductList.GetProductById(id), quantity);
                     products.Add(prod);
 
                     Logger.Log(String.Format("Store requested {0} of product {1}", quantity, prod.name));

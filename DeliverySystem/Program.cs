@@ -21,9 +21,9 @@ namespace DeliverySystem
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fStores());
 
-            //Store store = new Store(5, "VegetablesDrinkStore");
-            //store.products.Add(new Product(1, "Vegetable", 8));
-            //store.products.Add(new Product(2, "Drink", 2));
+            //Store store = new Store(3, "NullStore");
+            //store.products.Add(new Product(1, "Vegetable", 2));
+            //store.products.Add(new Product(2, "Drink", 1));
 
             //QRAdapter qRAdapter = new QRAdapter();
 
