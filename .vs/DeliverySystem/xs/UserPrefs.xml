@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{15A42193-6CE9-4ADB-BFDC-5C94D9715011}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DeliverySystem/Program.cs">
+    <Files>
+      <File FileName="DeliverySystem/QRAdapter.cs" Line="18" Column="26" />
+      <File FileName="DeliverySystem/QRProduct.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/QRStore.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/Store.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/DBProduct.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/Product.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/ProductList.cs" Line="1" Column="1" />
+      <File FileName="DeliverySystem/Program.cs" Line="22" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.DeliverySystem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

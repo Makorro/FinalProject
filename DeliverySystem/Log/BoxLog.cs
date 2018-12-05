@@ -9,24 +9,24 @@ namespace DeliverySystem
 {
     class BoxLog : LogObserver
     {
-        TextboxSingleton textbox_singleton;
+        TextboxSingleton logElement;
 
         public BoxLog()
         {
             IdLog = 1;
             LogName = "Textbox Log";
-            textbox_singleton = TextboxSingleton.GetReference();
-            textbox_singleton.Show();
+            logElement = TextboxSingleton.GetReference();
+            logElement.Show();
         }
 
         public override void ConcreteLog(LogItem Log)
         {
-            textbox_singleton.AddLog(Log);
+            logElement.AddLog(Log);
         }
 
         public override void Close()
         {
-            textbox_singleton.Close();
+            logElement.Close();
         }
 
         public override int GetId()

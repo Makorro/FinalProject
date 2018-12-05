@@ -10,24 +10,24 @@ namespace DeliverySystem
 {
     class DgvLog : LogObserver
     {
-        private DataGridSingleton datagrid_singleton;
+        private DataGridSingleton logElement;
 
         public DgvLog()
         {
             IdLog = 2;
             LogName = "DataGridView Log";
-            datagrid_singleton = DataGridSingleton.GetReference();
-            datagrid_singleton.Show();
+            logElement = DataGridSingleton.GetReference();
+            logElement.Show();
         }
 
         public override void Close()
         {
-            datagrid_singleton.Close();
+            logElement.Close();
         }
 
         public override void ConcreteLog(LogItem log)
         {
-            datagrid_singleton.AddLog(log);
+            logElement.AddLog(log);
         }
 
         public override int GetId()
